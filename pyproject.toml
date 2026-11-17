@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mediloop"
+version = "1.0.0"
+description = "A small Python client for the Mediloop API: tokens, safe retries, paging, webhook checks and Sign in with Mediloop."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = []
+keywords = ["mediloop", "health", "uganda", "fhir", "api"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://docs.mediloop.co"
+Repository = "https://github.com/zentrix-innovative-labs/mediloop-python"
+Issues = "https://github.com/zentrix-innovative-labs/mediloop-python/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mediloop"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/mediloop", "tests", "README.md", "LICENSE", "CHANGELOG.md"]
