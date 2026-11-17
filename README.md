@@ -74,6 +74,14 @@ fresh = Pkce.refresh(client_id, tokens["refresh_token"], client_secret)
 The access token is the person's. Send it as a bearer token to call what the person may do in your app, such as
 [calls and messages](https://docs.mediloop.co/docs/api/calls).
 
+## Sandbox
+
+To test with made-up data, use a sandbox key (`sk_test_...`) and the sandbox address:
+
+```python
+mediloop = Client(api_key=os.environ["MEDILOOP_SANDBOX_KEY"], base_url="https://sandbox.api.mediloop.co")
+```
+
 ## Tests
 
     python tests/test_client.py        # no network
